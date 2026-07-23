@@ -1,20 +1,17 @@
-# Thông tin chủ sở hữu và repository
 owner: vankhoaluong
 repo: uptime-monitor
 
-# Danh sách bot cần giám sát và giữ thức
 sites:
   - name: Nutritron Bot
     url: https://nutritron-bot.onrender.com
     expectedStatus: 200
-    checkInterval: 300  # Ping mỗi 5 phút
+    checkInterval: 300
     
   - name: Telegram Timesheet Bot
     url: https://telegram-timesheet-bot-uiqz.onrender.com
     expectedStatus: 200
-    checkInterval: 300  # Ping mỗi 5 phút
+    checkInterval: 300
 
-# Trang trạng thái
 status-website:
   name: Trạng Thái Bot Telegram
   baseUrl: /uptime-monitor
@@ -23,21 +20,8 @@ status-website:
     down: 🔴 Đang gặp sự cố
     degraded: 🟡 Hiệu suất giảm
 
-# Thông báo qua Telegram khi bot sập
-notifications:
-  - type: telegram
-    # Token và Chat ID sẽ được tự động lấy từ GitHub Secrets 
-    # (hoặc cấu hình thông qua biến môi trường trong file workflow)
-
-# Người nhận thông báo qua GitHub Issues
 assignees:
   - vankhoaluong
 
-# Cấu hình chung
 delay: 300
 requestTimeout: 10000
-
-# Báo cáo hàng ngày lúc 9h sáng (giờ Việt Nam)
-summary:
-  schedule: "0 2 * * *" # 2:00 AM UTC tương đương 9:00 AM giờ Việt Nam
-  timezone: "Asia/Ho_Chi_Minh"
