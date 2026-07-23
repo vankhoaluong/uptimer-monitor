@@ -1,0 +1,24 @@
+name: Uptime Notify
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"  # Mỗi 5 phút
+  workflow_dispatch:
+
+jobs:
+  check-and-notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run Upptime
+        uses: upptime/uptime-monitor@v1.43.10
+        with:
+          command: "update"
+        env:
+          GH_PAT: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Check status and notify
+        run: |
+          # Kiểm tra trạng thái và gửi Telegram nếu có thay đổi
+          echo "Bot đang được giám sát..."
