@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          node-version: '22'  # Thêm dòng này
       
       - name: Generate summary
         uses: upptime/uptime-monitor@v1.43.10
