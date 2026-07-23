@@ -1,31 +1,47 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Thông tin chủ sở hữu và repository
+owner: vankhoaluong
+repo: uptime-monitor
 
+# Danh sách bot cần giám sát và giữ thức
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+  - name: Nutritron Bot
+    url: https://nutritron-bot.onrender.com
+    expectedStatus: 200
+    checkInterval: 300  # Ping mỗi 5 phút
+    
+  - name: Telegram Timesheet Bot
+    url: https://telegram-timesheet-bot-uiqz.onrender.com
+    expectedStatus: 200
+    checkInterval: 300  # Ping mỗi 5 phút
 
+# Trang trạng thái
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
-  navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+  name: Trạng Thái Bot Telegram
+  baseUrl: /uptime-monitor
+  i18n:
+    active: 🟢 Đang hoạt động
+    down: 🔴 Đang gặp sự cố
+    degraded: 🟡 Hiệu suất giảm
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Thông báo qua Telegram khi bot sập
+notifications:
+  - type: telegram
+    token: "8779598279:AAEYuBAE-Bkc5CsAANoVP7RMy4DJH5W2u6Y"
+    chat_id: "5134418187"
+
+# Người nhận thông báo qua GitHub Issues
+assignees:
+  - vankhoaluong
+
+# Cấu hình chung
+delay: 300
+requestTimeout: 10000
+
+# Báo cáo hàng ngày lúc 9h sáng (giờ Việt Nam)
+summary:
+  schedule: "0 2 * * *"
+  timezone: "Asia/Ho_Chi_Minh"
+  notifications:
+    - type: telegram
+      token: "8779598279:AAEYuBAE-Bkc5CsAANoVP7RMy4DJH5W2u6Y"
+      chat_id: "5134418187"
