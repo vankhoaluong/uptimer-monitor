@@ -1,1 +1,26 @@
+name: Daily Summary
 
+on:
+  schedule:
+    - cron: "0 2 * * *"  # 9h sáng giờ VN
+  workflow_dispatch:
+
+jobs:
+  summary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Generate summary
+        uses: upptime/uptime-monitor@v1.43.10
+        with:
+          command: "summary"
+        env:
+          GH_PAT: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Send to Telegram
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d "parse_mode=Markdown" \
+            -d "text=📊 *BÁO CÁO HÀNG NGÀY - $(TZ='Asia/Ho_Chi_Minh' date +'%d/%m/%Y')*%0A%0A🔹 *Nutritron Bot*%0A🌐 https://nutritron-bot.onrender.com%0A%0A🔹 *Timesheet Bot*%0A🌐 https://telegram-timesheet-bot-uiqz.onrender.com%0A%0A🌐 *Status Page:* https://vankhoaluong.github.io/uptime-monitor"
