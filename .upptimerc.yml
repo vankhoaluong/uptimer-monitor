@@ -2,13 +2,8 @@ owner: vankhoaluong
 repo: uptime-monitor
 
 sites:
-  - name: Nutritron Bot
-    url: https://nutritron-bot.onrender.com
-    expectedStatus: 200
-    checkInterval: 300
-    
-  - name: Telegram Timesheet Bot
-    url: https://telegram-timesheet-bot-uiqz.onrender.com
+  - name: All Telegram Bots
+    url: https://multi-telegram-bot.onrender.com
     expectedStatus: 200
     checkInterval: 300
 
