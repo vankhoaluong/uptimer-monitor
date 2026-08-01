@@ -5,16 +5,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/multi-telegram-bot.onrender.com.ico",
     "slug": "all-telegram-bots",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "99.03%",
+    "uptimeDay": "92.25%",
+    "uptimeWeek": "98.89%",
+    "uptimeMonth": "99.03%",
+    "uptimeYear": "99.03%",
     "time": 5238,
     "timeDay": 340,
     "timeWeek": 6644,
     "timeMonth": 5238,
     "timeYear": 5238,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-08-01": 112
+    }
   }
 ]
