@@ -4,17 +4,17 @@
     "url": "https://multi-telegram-bot.onrender.com",
     "icon": "https://icons.duckduckgo.com/ip3/multi-telegram-bot.onrender.com.ico",
     "slug": "all-telegram-bots",
-    "status": "down",
-    "uptime": "98.59%",
+    "status": "up",
+    "uptime": "98.42%",
     "uptimeDay": "78.03%",
-    "uptimeWeek": "95.92%",
-    "uptimeMonth": "98.33%",
-    "uptimeYear": "98.59%",
-    "time": 10159,
-    "timeDay": 22519,
-    "timeWeek": 22519,
-    "timeMonth": 18640,
-    "timeYear": 10159,
+    "uptimeWeek": "94.39%",
+    "uptimeMonth": "97.98%",
+    "uptimeYear": "98.42%",
+    "time": 10600,
+    "timeDay": 27584,
+    "timeWeek": 27584,
+    "timeMonth": 19808,
+    "timeYear": 10600,
     "dailyMinutesDown": {
       "2026-08-01": 195,
       "2026-08-02": 200,
@@ -22,7 +22,7 @@
       "2026-08-20": 106,
       "2026-09-14": 319,
       "2026-09-23": 279,
-      "2026-09-24": 132
+      "2026-09-24": 286
     }
   }
 ]
